@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149845984-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149845984-1');
+</script>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Yupeng HAN's Project Experiences </title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">MENU</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="research.html">Research</a></div>
+<div class="menu-item"><a href="projects.html" class="current">Projects</a></div>
+<div class="menu-item"><a href="courses.html">Courses</a></div>
+<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="activities.html">Activities</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Yupeng HAN </h1>
+</div>
+<h2>Automonous Driving Robot</h2>
+<ul>
+<li><p>A self-designed and manufactured, fully autonomous robot that can retrieve multiple randomly located tennis balls from a <img class="eq" src="eqs/6461841972408738239-130.png" alt="16m^2" style="vertical-align: -1px" /> enclosure and put the tennis balls back into a random located container within one minute. </p>
+</li>
+<li><p>Applied computer vision (OpenCV installed on Raspberry Pi) to locate and track the tennis balls, randomly located container, and avoid obstacles based on objects’ color and outline shape under different experimental lighting conditions.</p>
+</li>
+<li><p>Utilized Raspberry Pi as the central controller and set Arduino as a motion controller. Searched and tracked the tennis ball based on the color and object outline and accomplished the movements by control the motor with self-programmed PID functions.</p>
+</li>
+<li><p>Overview of Robot & Self Rotating</p></li>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Qph7lKLSboc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/gJXXhazGCfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+</div>
+<!-- <li><p></p></li> -->
+
+<!-- <li><p>Tragedy: Robot Storage Gate Destroyed</p></li>
+<div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9_gO4ewpj5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img src="photos/prjrobot.png" alt=""  width=560 height=315 />
+</div> -->
+</ul>
+<h2>Social Network Analysis | Advisor: Prof. David F. Gleich</h2>
+<p>Social Network Analysis | Advisor: Prof. David F. Gleich, CS Department, Purdue University</p>
+<ul>
+<li><p>Read Ego-splitting from previous paper which is a highly scalable and flexible framework that reduces the complex overlapping clustering problem to a more straightforward and more amenable non-overlapping partitioning problem.</p>
+</li>
+<li><p>Re-accomplished the Ego-splitting framework in Julia. The new framework could handle a large graph (millions of edges) within a few (less than 10) minutes.</p>
+</li>
+<li><p>Demo of how Ego-splitting works, nodes stands for people, and edges stands for relationship. Nodes #1 is Yupeng HAN, nodes #2, #3, #4 are Yupeng's shoolmates, nodes #8, #9, #10 are Yupeng's co-workers and nodes #5, #6, #7 are Yupeng's family members. To better analysis the social network, we can divide Yupeng in to three nodes, #1, #11, #12 to represent Yupeng's working, studying, home characters. Following are the demo and the result of the efficiency. </p>
+</li>
+<li><p>[<a href="https://github.com/YupengHan/Ego-splitting-in-Julia">GitHub</a>]</p>
+</li>
+</ul>
+<table class="imgtable"><tr><td>
+<img src="photos/ego_split_demo.png" alt="alt text" width="930px" height="250px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<table class="imgtable"><tr><td>
+<img src="photos/ego_split_result.png" alt="alt text" width="930px" height="290px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<!-- <h2>Toxic Molecule: Prediction (Kaggle Project)</h2>
+<ul>
+<li><p>Generate a satisfying prediction (over 84% accuracy on unseen dataset three-times larger than training dataset) of whether a molecule is toxic to humans based on feature integration, feature extraction and data preprocessing on limited training data.</p>
+</li>
+<li><p>Selected Gradient Boost Decision Tree as the classifier to solve the task, considering the limited computing resources. Utilized K-fold cross-validation and re-sample procedure to get a better evaluation of the model and handle the unbalance data. Replaced redundant features with generated molecule fingerprint and created a new feature based on molecule geometry similarity which turned out to be beneficial for the final testing result.</p>
+</li>
+</ul> -->
+<!-- <h2>Complex Data Base Design</h2>
+<p>A database dedicated to helping hospitals manage patient registration, doctors scheduling, viewing device usage and vacant vacancies.</p>
+<ul>
+<li><p><a href="https://github.com/YupengHan/Complex-Data-Base-Design">GitHub Link</a></p>
+</li>
+</ul> -->
+<!-- <h2>Web Game</h2>
+<p>Flappy Race is a game where you play as a bird and must dodge obstacles as you flying. You can play by yourself to achieve the ultimate high score or compete against a friend in a battle between who can last longer. This project was made for CS252 at Purdue University and is hosting with Microsoft Azure using a custom built RESTful API.</p>
+<ul>
+<li><p><a href="https://github.com/YupengHan/Flappy-Race">GitHub Link</a></p>
+</li>
+<li><p>Game Tutorial</p>
+</li>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fBVUJJg0ZCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<video width="637" height="360" controls>
+  <source src="photos/PBG_outdoor.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</ul> -->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
