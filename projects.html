@@ -32,15 +32,37 @@
 <div id="toptitle">
 <h1>Yupeng HAN </h1>
 </div>
-<h2>Automonous Driving Robot</h2>
+
+
+<h2>Face Detection on Depth Image| Supervisor: Dr. Bo Wang</h2>
 <ul>
-<li><p>A self-designed and manufactured, fully autonomous robot that can retrieve multiple randomly located tennis balls from a <img class="eq" src="eqs/6461841972408738239-130.png" alt="16m^2" style="vertical-align: -1px" /> enclosure and put the tennis balls back into a random located container within one minute. </p>
+<li><p>Independently Implemented a modified version of the multi-task cascade CNN model based on Caffe and Python from scripts, which solved the problem of facial detection on completed depth images; optimized the model to obtain 99.93% precision and over 97% recall.</p></li>
+<li><p>[<a href="https://github.com/YupengHan/Face-Detection-on-Depth-Images">GitHub</a>]</p>
 </li>
-<li><p>Applied computer vision (OpenCV installed on Raspberry Pi) to locate and track the tennis balls, randomly located container, and avoid obstacles based on objects’ color and outline shape under different experimental lighting conditions.</p>
+
+<div>
+    <!-- <img src="photos/deptrum.png" alt=""  width=560 height=315 />
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+    <video width="557" height="315" controls>
+        <source src="photos/FaceDetection.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+</ul>
+
+
+
+
+
+
+<h2>Automonous Driving Robot | Team Project</h2>
+<ul>
+<li><p>A self-designed and manufactured, fully autonomous robot that can retrieve multiple randomly located tennis balls and put the tennis balls back to a random located container. </p>
 </li>
+<li><p>I in charge of the computer vision part. Applied OpenCV (installed on Raspberry Pi) to locate and track the tennis balls based on color and outline shape..</p></li>
 <!-- <li><p>Utilized Raspberry Pi as the central controller and set Arduino as a motion controller. Searched and tracked the tennis ball based on the color and object outline and accomplished the movements by control the motor with self-programmed PID functions.</p>
 </li> -->
-<li><p>Overview of Robot & Self Rotating</p></li>
+<li><p>Overview of Robot</p></li>
 <div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Qph7lKLSboc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/gJXXhazGCfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -54,15 +76,18 @@
 </div> -->
 </ul>
 <!-- <h2>Social Network Analysis | Advisor: Prof. David F. Gleich</h2> -->
-<h2>Social Network Analysis</h2>
+
+
+
+
+
+
+<!-- <h2>Social Network Analysis</h2>
 <p>Social Network Analysis | Advisor: Prof. David F. Gleich, CS Department, Purdue University</p>
 <ul>
-<li><p>Read Ego-splitting from previous paper which is a highly scalable and flexible framework that reduces the complex overlapping clustering problem to a more straightforward and more amenable non-overlapping partitioning problem.</p>
-</li>
-<li><p>Re-accomplished the Ego-splitting framework in Julia. The new framework could handle a large graph (millions of edges) within a few (less than 10) minutes.</p>
-</li>
-<li><p>Demo of how Ego-splitting works, nodes stands for people, and edges stands for relationship. Nodes #1 is Yupeng HAN, nodes #2, #3, #4 are Yupeng's shoolmates, nodes #8, #9, #10 are Yupeng's co-workers and nodes #5, #6, #7 are Yupeng's family members. To better analysis the social network, we can divide Yupeng in to three nodes, #1, #11, #12 to represent Yupeng's working, studying, home characters. Following are the demo and the result of the efficiency. </p>
-</li>
+<li><p>Read Ego-splitting from previous paper which is a highly scalable and flexible framework that reduces the complex overlapping clustering problem to a more straightforward and more amenable non-overlapping partitioning problem.</p></li>
+<li><p>Re-accomplished the Ego-splitting framework in Julia. The new framework could handle a large graph (millions of edges) within a few (less than 10) minutes.</p></li>
+<li><p>Demo of how Ego-splitting works, nodes stands for people, and edges stands for relationship. Nodes #1 is Yupeng HAN, nodes #2, #3, #4 are Yupeng's shoolmates, nodes #8, #9, #10 are Yupeng's co-workers and nodes #5, #6, #7 are Yupeng's family members. To better analysis the social network, we can divide Yupeng in to three nodes, #1, #11, #12 to represent Yupeng's working, studying, home characters. Following are the demo and the result of the efficiency. </p></li>
 <li><p>[<a href="https://github.com/YupengHan/Ego-splitting-in-Julia">GitHub</a>]</p>
 </li>
 </ul>
@@ -71,7 +96,7 @@
 <td align="left"></td></tr></table>
 <table class="imgtable"><tr><td>
 <img src="photos/ego_split_result.png" alt="alt text" width="465px" height="145px" />&nbsp;</td>
-<td align="left"></td></tr></table>
+<td align="left"></td></tr></table> -->
 <!-- <h2>Toxic Molecule: Prediction (Kaggle Project)</h2>
 <ul>
 <li><p>Generate a satisfying prediction (over 84% accuracy on unseen dataset three-times larger than training dataset) of whether a molecule is toxic to humans based on feature integration, feature extraction and data preprocessing on limited training data.</p>
