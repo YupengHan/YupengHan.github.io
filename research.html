@@ -30,7 +30,7 @@
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>Yupeng HAN </h1>
+<h1>Research Interests</h1>
 </div>
 <table class="imgtable"><tr><td>
 <img src="photos/keywords2.png" alt="alt text" width="750px" height="307px" />&nbsp;</td>
@@ -56,14 +56,17 @@
 <!-- </p> -->
 </td></tr></table>
 
+<h1><BIG>M</BIG><small>ODEL</small> <BIG>B</BIG><small>ASED</small> <BIG>V</BIG><small>ISION</small></h1>
 
-
-<h2>Vehicle-PERCH |Advisor: Prof. Maxim Likhachev</h2>
-<p>Research Staff, Search-Based Planning Lab, the Robotics Institute, Carnegie Mellon University</b></p>
+<h3>Outdoor Vehicle Detection | Advisor: Prof. Maxim Likhachev</h3>
+<p>Research Staff, <i>Search-Based Planning Lab</i>&emsp;&emsp;&emsp;&emsp;<b>Robotics Institute, Carnegie Mellon University</b></p>
 <ul>
-<li><p>Propose a novel 3D vehicle detection framwork, with <b><em>NO NEED for 3D ANNOTATIONS</em></b>.</p></li>
-<li><p>A <b><em>REAL-TIME</b></em> analysis-by-synthesis (or generative perception) approaches for vehicle 3D pose estimation.</p></li>
-<li><p>Test on the KITTI dataset, achieve <b><em>ON-PAR</b></em> 3D detection & localization performance with SOTA algorithms.</p></li>
+<li><p>Proposed Vehicle-PERCH, a novel 3D vehicle detection framework that can detect vehicle 3D pose through an analysis-by-
+synthesis manner. The algorithm effectively integrates 2D and 3D information, thus provides <b><em>REAL-TIME</em></b> capability</p></li>
+<li><p>Applied unsupervised clustering method (Gaussian mixture models) to separate vehicles into twelve categories based on
+vehicle size information, then constructed a dozen vehicle 3D models (microcar, sedan, compact car, SUV, etc.)</p></li>
+<li><p>Experimented on the KITTI dataset. The results show that Vehicle-PERCH achieves <b><em>ON PAR</em></b> 3D detection & localization
+performance with the state-of-the-art learning-based methods, <b><em>WITHOUT</em></b> using 3D pose annotation data</p></li>
 <li><p>Submitted to ICRA 2021</p></li>
 <video autoplay loop muted playsinline  width="640" height="360" autobuffer class="video-background" controls>
 <!-- <video width="640" height="360" controls> -->
@@ -74,20 +77,24 @@ Your browser does not support the video tag.
 <div class="infoblock">
 <div class="blocktitle">Featured Publication:</div>
 <div class="blockcontent">
-<p><b>Han Yupeng</b>, Sandip Aine and Maxim Likhachev, "Real-time 3D Perception via Search for Vehicle Detection with No Pose Annotated Training Data"</p>
+<p><b>Yupeng Han</b>, Sandip Aine and Maxim Likhachev, "Real-time 3D Perception via Search for Vehicle Detection with No Pose Annotated Training Data", <i>IEEE International Conference on Robotics and Automation (ICRA) 2021</i>[Under Review]</p>
 </div></div>
 
 
-
-<h2>PERCH 2.0 |Advisor: Prof. Maxim Likhachev</h2>
+<h3>Indoor object 6DOF Pose Estimation |Advisor: Prof. Maxim Likhachev</h3>
 <!-- Indoor 6-Dof Object Pose Estimation -->
-<p>Research Staff, Search-Based Planning Lab, The Robotics Institute, Carnegie Mellon University</p>
+<p>Research Staff, <i>Search-Based Planning Lab</i>&emsp;&emsp;&emsp;&emsp;<b>Robotics Institute, Carnegie Mellon University</b></p>
 <ul>
-<li><p>Perception Via Search (PERCH) is a class of algorithms that search for the best explanation of the observed scene in a space of possible rendered scenes, thus accounting for occlusion. However these algorithms are slow, owing to their deliberative nature. In this work we redesign these algorithms in order to exploit their inherent parallel nature better on a GPU. The redesigned algorithm, PERCH 2.0, is upto a ~100X faster that its predecessor PERCH.</p>
+<li><p>Studied Perception Via Search (PERCH) is a class of algorithms that is first rendering scenes with different object poses, then search for the best explanation of the observed scene in the space of possible rendered scenes, thus predict the object pose while accounting for occlusion</p>
 </li>
 <li>
   <p>
-    Open dataset(YCB) shows that our proposed PERCH 2.0 <b><em>SURPASSES State-Of-The-Art</em></b> 6Dof pose estimation methods with remarkable margins without the need for any ground truth pose annotation.
+    Studied space rotation formalisms, took advantage of the object's geometric symmetry of the object to reduce redundant space rotation proposals, thereby achieving an algorithm speedup (over 50%)
+  </p>
+</li>
+<li>
+  <p>
+    Tested on the open dataset (YCB), results show that our algorithm <b><em>SURPASSES</em></b> state-of-the-art 6-DOF pose estimation methods with remarkable margins without need for any ground truth pose annotations
   </p>
 </li>
 <!-- <li><p>Accepted by IROS 2020.</p></li> -->
@@ -118,16 +125,15 @@ Your browser does not support the video tag.
 <div class="infoblock">
 <div class="blocktitle">Featured Publication:</div>
 <div class="blockcontent">
-<p>Agarwal Aditya, <b>Han Yupeng</b>, and Maxim Likhachev, "PERCH 2.0 : Fast and Accurate GPU-based Perception via Search for Object Pose Estimation"<br />
-International Conference on Intelligent Robots and Systems 2020</p>
+<p>Agarwal Aditya, <b>Han Yupeng</b>, and Maxim Likhachev, "PERCH 2.0 : Fast and Accurate GPU-based Perception via Search for Object Pose Estimation", <i>IEEE International Conference on Intelligent Robots and Systems 2020</i></p>
 </div></div>
 
 
 
 
-
-<h2>Modeling and Analysis of Complex System | Advisor: Prof. Jitesh Panchal</h2>
-<p>Master Student, Design Engineering Lab at Purdue(DELP), ME Department, Purdue University</p>
+<h1><BIG>S</BIG><small>YSTEM</small> <BIG>A</BIG><small>NALYSIS</small></h1>
+<h3>Modeling and Analysis of Complex System | Advisor: Prof. Jitesh Panchal</h3>
+<p>Master Student, Design Engineering Lab at Purdue(DELP),&emsp;&emsp;&emsp;<b> ME Department, Purdue University</b></p>
 <ul>
 <li><p>Solved the difficulty of service seekers when faced with a large number of service providers, also addressed the drawbacks of the First In First Out (FIFO) matching mechanism by developed a stable matching system based on utility theory to generate the preference lists of service providers and service seekers. The matching mechanism was accomplished based on different utility interests. Searched for the optimal matching frequency using the provided matching.</p></li>
 <!-- <li><p>Implemented the matching algorithm based on MATLAB and simulated service seekers arrive as a Poisson process with a fixed number of service providers offering resources. The service providers could only serve for one service seekers at one time.</p></li> -->
@@ -136,8 +142,7 @@ International Conference on Intelligent Robots and Systems 2020</p>
 <div class="infoblock">
 <div class="blocktitle">Featured Publication:</div>
 <div class="blockcontent">
-<p>Thekinen J., <b>Han Yupeng</b>, and Panchal J. H., "Designing market thickness and optimal frequency of multi-period stable matching in CBDM" <br />
-ASME 2018 International Design Engineering Technical Conferences Computers and Information in Engineering Conference. [<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">pdf</a>] <br /></p>
+<p>Thekinen J., <b>Han Yupeng</b>, and Panchal J. H., "Designing market thickness and optimal frequency of multi-period stable matching in CBDM", <i>ASME International Design Engineering Technical Conferences Computers and Information in Engineering Conference 2018</i> [<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">pdf</a>] <br /></p>
 </div></div>
 
 
@@ -156,7 +161,7 @@ ASME 2018 International Design Engineering Technical Conferences Computers and I
 
 <h1>INTERESTING IDEAS</h1>
 
- <h2>2D and 3D Feature Fusion for Autonomous Driving |Advisor: Prof. Cewu LU</h2>
+ <h3>2D and 3D Feature Fusion | Advisor: Prof. Cewu LU</h3>
 <p>Machine Vision and Intelligence Group, CS Department, SJTU</p>
 <ul>
 <li><p>Aiming to use one neural network to detect multi-scale objects by applying different anchors to different categories</p></li>
@@ -175,7 +180,7 @@ ASME 2018 International Design Engineering Technical Conferences Computers and I
     </video>
 </div> 
 </ul>
-<h2>Data-Aware Algorithm to Solve Discrete Integration | Advisor: Prof. Yexiang Xue</h2>
+<h3>Data-Aware Algorithm to Solve Discrete Integration | Advisor: Prof. Yexiang Xue</h3>
 <p>Machine Learning Group, CS Department, Purdue University</p>
 <ul>
 <li><p>Inspired by &ldquo;Taming the Curse of Dimensionality: Discrete Integration by Hashing and Optimization&rdquo; and exploited a data-aware strategy to modify the original algorithm.</p>
