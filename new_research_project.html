@@ -42,7 +42,12 @@ Predicting an object's pose is an important topic of robot vision, which has imp
   <li><p>[1] For each new scenario, a corresponding training data set needs to be established (Which could be expensive, especially for 6DOF pose labeling).</p></li>
   <li><p>[2] When there is a change in the scene (Eg: the light becomes stronger), it is necessary to re-establish the data set and train a new neural network.</p></li>
 </ul>
-
+<h3>Observation</h3>
+I revisited the way neural networks recognize objects.<br />
+<ul>
+  <li><p>[1] Color information, provided by RGB images and label data.</p></li>
+  <li><p>[2] Pattern information, that is, the surface texture information of the object of interest.</p></li>
+</ul>
 <table class="imgtable"><tr><td>
   &emsp;&emsp;<img src="photos/The_Dress.png" alt="alt text" width="150px" height="200px" />&nbsp;</td>
   <td align="left">
@@ -54,32 +59,21 @@ Predicting an object's pose is an important topic of robot vision, which has imp
     coloured black and royal blue,<br/>
     or white and gold.<br/>
     [<a href="https://en.wikipedia.org/wiki/The_dress">Wikipedia The Dress</a>]
-  </td></tr></table>
-<br />
-<h3>Observation</h3>
-I revisited the way neural networks recognize objects.<br />
-<ul>
-  <li><p>[1] Color information, provided by RGB images and label data.</p></li>
-  <li><p>[2] Pattern information, that is, the surface texture information of the object of interest.</p></li>
-</ul>
-  
+</td></tr></table>
   
   
 In my opinion, the reason why the current mainstream object recognition algorithms lack portability is that <br />
 <ul>
-  <b>There is no one-to-one correspondence between the RGB color information and the actual Hue of the object.</b><br />
+  [1] Without a given white point, there is no one-to-one correspondence between the RGB color information and the actual hue of the object.<br />
+  [2] It is worth noting that humans do not directly use RGB information but use the brain to process RGB information.
 </ul>
-Human recognition of objects may also be through two steps, color and pattern. It is worth noting that
-<ul>
-  <b>human do not directly use RGB information but use the brain to process RGB information.</b>
-</ul>
-
-<h3>Limitation</h3>
 Through further understanding, I found that the colors we usually talk about can be divided into hue, saturation, and luminance. <br />
 Interestingly, in different luminance situations, different hues may show the same RGB. <br />
-That is, the RGB information does not have a one-to-one correspondence with the original color of the object. <br />
-This has a major impact on neural networks. If we are in an environment where the light intensity is A, <br />
-collect data and train CNN. When the test environment light intensity B and A are very different, we can hardly expect CNN to have the same accuracy as in the past.
+<table class="imgtable"><tr><td>
+  &emsp;&emsp;<img src="photos/rgb_1.png" alt="alt text" width="535px" height="250px" />&nbsp;</td>
+  </tr></table>
+<h3>Limitation</h3>
+This has a major impact on neural networks. If we are in an environment where the light intensity is A, collect data and train CNN. When the test environment light intensity B and A are very different, we can hardly expect CNN to have the same accuracy as in the past.
 
 <!-- Proposed Approach -->
 <h1><BIG>P</BIG><small>ROPOSED</small> <BIG>A</BIG><small>PPROACH</small></h1>
