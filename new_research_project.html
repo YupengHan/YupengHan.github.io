@@ -44,7 +44,7 @@ Predicting an object's pose is an important topic of robot vision, which has imp
 </ul>
 
 <table class="imgtable"><tr><td>
-  <img src="photos/The_Dress.png" alt="alt text" width="150px" height="200px" />&nbsp;</td>
+  &emsp;&emsp;<img src="photos/The_Dress.png" alt="alt text" width="150px" height="200px" />&nbsp;</td>
   <td align="left">
     The dress is a photograph that <br/>
     became a viral internet sensation <br/>
@@ -56,6 +56,7 @@ Predicting an object's pose is an important topic of robot vision, which has imp
     [<a href="https://en.wikipedia.org/wiki/The_dress">Wikipedia The Dress</a>]
   </td></tr></table>
 <br />
+<h3>Observation</h3>
 I revisited the way neural networks recognize objects.<br />
 <ul>
   <li><p>[1] Color information, provided by RGB images and label data.</p></li>
@@ -65,11 +66,15 @@ I revisited the way neural networks recognize objects.<br />
   
   
 In my opinion, the reason why the current mainstream object recognition algorithms lack portability is that <br />
-<b>There is no one-to-one correspondence between the RGB color information and the actual Hue of the object.</b><br />
-<br />
-Human recognition of objects may also be through two steps, color and pattern. It is worth noting that <br />
-<b>human do not directly use RGB information but use the brain to process RGB information.</b> <br />
-<br />
+<ul>
+  <b>There is no one-to-one correspondence between the RGB color information and the actual Hue of the object.</b><br />
+</ul>
+Human recognition of objects may also be through two steps, color and pattern. It is worth noting that
+<ul>
+  <b>human do not directly use RGB information but use the brain to process RGB information.</b>
+</ul>
+
+<h3>Limitation</h3>
 Through further understanding, I found that the colors we usually talk about can be divided into hue, saturation, and luminance. <br />
 Interestingly, in different luminance situations, different hues may show the same RGB. <br />
 That is, the RGB information does not have a one-to-one correspondence with the original color of the object. <br />
@@ -88,163 +93,27 @@ In order to solve the above-mentioned problems, we propose an object detection m
   <li><p>For light-stable scenes (EG: warehouses), this type of method is quick and easy to implement.</p></li>
 </ul>
 
-
-
-
-
-<h1><BIG>S</BIG><small>YSTEM</small> <BIG>A</BIG><small>NALYSIS</small></h1>
-<h3>Modeling and Analysis of Complex System | Advisor: Prof. Jitesh Panchal</h3>
-<p>Master Student, Design Engineering Lab at Purdue(DELP),&emsp;&emsp;&emsp;<b> ME Department, Purdue University</b></p>
-<ul>
-<li><p>Solved the difficulty of service seekers when faced with a large number of service providers, also addressed the drawbacks of the First In First Out (FIFO) matching mechanism by developed a stable matching system based on utility theory to generate the preference lists of service providers and service seekers. The matching mechanism was accomplished based on different utility interests. Searched for the optimal matching frequency using the provided matching.</p></li>
-<!-- <li><p>Implemented the matching algorithm based on MATLAB and simulated service seekers arrive as a Poisson process with a fixed number of service providers offering resources. The service providers could only serve for one service seekers at one time.</p></li> -->
-<!-- <li><p>[<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">Paper</a>]</p></li> -->
-</ul>
-<div class="infoblock">
-<div class="blocktitle">Featured Publication:</div>
-<div class="blockcontent">
-<p>Thekinen J., <b>Han Yupeng</b>, and Panchal J. H., "Designing market thickness and optimal frequency of multi-period stable matching in CBDM", <i>ASME International Design Engineering Technical Conferences Computers and Information in Engineering Conference 2018</i> [<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">pdf</a>] <br /></p>
-</div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>INTERESTING IDEAS</h1>
-
- <h3>2D and 3D Feature Fusion | Advisor: Prof. Cewu LU</h3>
-<p>Machine Vision and Intelligence Group, CS Department, SJTU</p>
-<ul>
-<li><p>Aiming to use one neural network to detect multi-scale objects by applying different anchors to different categories</p></li>
-<!-- <li><p>Explored using a single model makes 3D detection in multi-scale objects; generated ideas to strengthen the 3D point cloud and extracted features by utilizing 2D RGB extracted features and dynamic anchor boxes&rsquo; size determined by 2D images.</p></li> -->
-<li><p>Built the pipeline of the fusion network, including extracting different features from point clouds and RGB images, transforming 2D information to 3D proposal boxes, cropped key points and their 3D features inside the proposal boxes, and concatenated 3D features with 2D features, and performed post-processing.</p></li>
-<!-- <li><p>Implemented a modified version of Faster-RCNN from scripts to feed in RGB images and output bounding boxes, classification labels, estimated depths, and proposal orientations in bird&ndash;eye view -– this project had over 6k lines of code.</p></li> -->
-<!-- <li><p>Selected the sparse convolution network as the backbone of the 3D point cloud feature extractor due to its performance on ScanNet.</p></li> -->
-<li><p>[<a href="https://github.com/YupengHan/FusionNet">Github</a>]</p>
-</li>
+<h1><BIG>O</BIG><small>NGOING</small> <BIG>P</BIG><small>ROJECT</small></h1>
+<h3>Build New Object 3D Model</h3>
 <div>
-    <!-- <img src="photos/fusion.png" alt=""  width=538 height=336 />
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
-    <video width="538" height="336" controls>
-        <source src="photos/2D3Dfusion.mp4" type="video/mp4">
+  <video id = "cg1" autobuffer playsinline  width="384" height="216" autobuffer class="video-background" controls>
+      <source src="gifs/get_model_1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
-</div> 
-</ul>
-<h3>Data-Aware Algorithm to Solve Discrete Integration | Advisor: Prof. Yexiang Xue</h3>
-<p>Machine Learning Group, CS Department, Purdue University</p>
-<ul>
-<li><p>Inspired by &ldquo;Taming the Curse of Dimensionality: Discrete Integration by Hashing and Optimization&rdquo; and exploited a data-aware strategy to modify the original algorithm.</p>
-</li>
-<li><p>Generated an adaptive comparison strategy to reduce the expectation of computational complexity without loss of constant estimation guarantee and compared to the new algorithm with an imaginary &ldquo;optimal&rdquo; algorithm to provide a regret bound for the new algorithm.</p>
-</li>
-<li><p>[<a href="algorithm_design.pdf">Manuscripts</a>] | [<a href="https://drive.google.com/open?id=1ebdHFkPVb7xPHdFYmMZG4JlAzdwkPzxv">Presentation Slides</a>]</p>
-</li>
-<div class="image"/><br />
-<div>
-    <img src="gifs/PI1.gif" alt=""  width=550 height=309 />
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <img src="gifs/PI2.gif" alt=""  width=550 height=309 />
-</div>
-</ul>
-<!-- <h2>Social Network Analysis | Advisor: Prof. David F. Gleich</h2>
-<p>Social Network Analysis | Advisor: Prof. David F. Gleich, CS Department, Purdue University</p>
-<ul>
-<li><p>Read Ego-splitting from previous paper which is a highly scalable and flexible framework that reduces the complex overlapping clustering problem to a more straightforward and more amenable non-overlapping partitioning problem.</p>
-</li>
-<li><p>Re-accomplished the Ego-splitting framework in Julia. The new framework could handle a large graph (millions of edges) within a few (less than 10) minutes.</p>
-</li>
-<li><p>Demo of how Ego-splitting works, nodes stands for people, and edges stands for relationship. Nodes #1 is Yupeng HAN, nodes #2, #3, #4 are Yupeng's shoolmates, nodes #8, #9, #10 are Yupeng's co-workers and nodes #5, #6, #7 are Yupeng's family members. To better analysis the social network, we can divide Yupeng in to three nodes, #1, #11, #12 to represent Yupeng's working, studying, home characters. Following are the demo and the result of the efficiency. </p>
-</li>
-<li><p>[<a href="https://github.com/YupengHan/Ego-splitting-in-Julia">GitHub</a>]</p>
-</li>
-</ul>
-<table class="imgtable"><tr><td>
-<img src="photos/ego_split_demo.png" alt="alt text" width="930px" height="250px" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<table class="imgtable"><tr><td>
-<img src="photos/ego_split_result.png" alt="alt text" width="930px" height="290px" />&nbsp;</td>
-<td align="left"></td></tr></table> -->
-<a href="projects.html"><i>Some Interesting Projects~</i></a>
-</td>
-</tr>
-</table>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h2>GPU-based Perception via Search for Vehicle Detection |Advisor: Prof. Maxim Likhachev</h2>
-<p>Research Assistant, Search-Based Planning Lab, <b>The Robotics Institute, Carnegie Mellon University</b></p>
-<ul>
-<li><p> -->
-<!-- Noticed the distinct advantages of detecting occluded objects with generative approaches that estimated the pose of every object in the scene by constantly reconstructing the scene and evaluating the difference between the reconstructed scene and the input scene. -->
-<!-- Propose an accurate, robust, and real-time framework target to solve 3D vehicle detection problems. -->
-<!-- Overcome the efficiency problem of 2D \& 3D feature fusion.
-Learning-Free Framework that can accurately estimate vehicle 3D pose from the 2D bounding box with real-time performance. -->
-<!-- </p>
-<li><p>
-Propose a novel way of aggregation the 2D & 3D information aiming to mitigate the occlusion caused double the viewpoints(LiDAR lens viewpoint and camera lens viewpoint) -->
-<!-- Enhanced robotic perception performance under especially poor visual conditions by bridging the generative approaches with learning-based perception and prior knowledge embedded in the probabilistic graphical model. -->
-<!-- </p>
-</li>
-<li>
-<p> -->
-<!-- Covered state-of-the-art probabilistic graphical models to explore the possibility of embedding prior knowledge into those models. -->
-<!-- Learning-Free pipeline that can accurately estimate object 3D pose from 2D bounding box on RGB image.
-</p>
-</li>
-<li>
-<p>
-Through GPU-based parallelization, the algorithm can obtain real-time processing capabilities. -->
-<!-- Tested generative approaches with multiple evaluation functions and utilized prior data, such as number of cars on the road, to reduce the number of reconstructed scenes significantly; Experimented on 3D object detection task of KITTI Dataset. -->
-<!-- </p>
-</li>
-<li>
-<p>
-Experiments on the KITTI dataset and achive good accuracy without the need of 3D pose annotation.
-</p>
-</li>
-<li>
-<p>[Ongoing Project] Going to submit to ICRA 2021</p>
-</li> -->
-<!-- Perception by Generation Videos 1274 × 720-->
-<!-- <video width="637" height="360" controls>
-  <source src="photos/PBG_outdoor.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
-</ul> -->
+  <script>
+      document.getElementById('cg1').play();
+  </script>
+  &nbsp&nbsp
+  <video id = "cg2" autobuffer playsinline muted autoplay="autoplay" loop="loop" width="384" height="216" controls>
+    <source src="gifs/get_model_2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <script>
+      document.getElementById('cg2').play();
+  </script>
+  </div>
+<h3>Collect RGB-D Data</h3>
+  <video autoplay loop muted playsinline  width="384" height="216" autobuffer class="video-background" controls>
+    <source src="gifs/get_data.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
