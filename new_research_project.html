@@ -34,13 +34,31 @@
 <!-- Learning-Free Object Detection and Localization -->
 <h1><BIG>L</BIG><small>EARNING-</small> <BIG>F</BIG><small>REE</small> <BIG>O</BIG><small>BJECT</small> <BIG>D</BIG><small>ETECTION</small> <BIG>A</BIG><small>ND</small> <BIG>L</BIG><small>OCALIZATION</small></h1>
 </div>
-
+<table class="imgtable"><tr><td>
+  <img src="photos/NPJ_Overview.png" alt="alt text" width="609px" height="330px" />&nbsp;</td>
+  </tr></table>
 <h1><BIG>M</BIG><small>OTIVATION</small></h1>
-Predicting an object's pose is an important topic of robot vision, which has important value in automated warehouses.
+Intelligent warehouse is a promising area, and predicting object poses is a critical task.
+
+<table class="imgtable"><tr><td>
+  <img src="photos/NPJ_motiv.png" alt="alt text" width="385px" height="321px" />&nbsp;</td>
+  <td align="left">
+    <br>In the scenario of smart warehousing, it generally has the following characteristics: </br>
+    <ul>
+      <li><p>Known object</p></li>  
+      <li><p>Object types often change</p></li>  
+      <li><p>Each warehouse has different conditions (lighting, object types)</p></li>  
+    </ul>
+  </td>
+</tr></table>
+
+
+
+
 <br>Current mainstream object detection and location approaches rely on neural networks, which may have the following problems:</br>
 <ul>
   <li><p>[1] For each new scenario, a corresponding training data set needs to be established (Which could be expensive, especially for 6DOF pose labeling).</p></li>
-  <li><p>[2] When there is a change in the scene (Eg: the light becomes stronger), it is necessary to re-establish the data set and train a new neural network.</p></li>
+  <li><p>[2] When there is a change in the scene (Eg: the light becomes stronger), it is necessary to <b>RE-establish</b> the data set and <b>RE-train</b> a new neural network.</p></li>
 </ul>
 <h3>Observation</h3>
 I revisited the way neural networks recognize objects.<br />
@@ -49,7 +67,7 @@ I revisited the way neural networks recognize objects.<br />
   <li><p>[2] Pattern information, that is, the surface texture information of the object of interest.</p></li>
 </ul>
 <table class="imgtable"><tr><td>
-  &emsp;&emsp;<img src="photos/The_Dress1.png" alt="alt text" width="369px" height="158px" />&nbsp;</td>
+  <img src="photos/The_Dress2.png" alt="alt text" width="555px" height="263px" />&nbsp;</td>
   <!-- <td align="left">
     The dress is a photograph that <br/>
     became a viral internet sensation <br/>
@@ -63,35 +81,45 @@ I revisited the way neural networks recognize objects.<br />
 </tr></table>
   
   
-In my opinion, the reason why the current mainstream object recognition algorithms lack portability is that <br />
+<!-- In my opinion, the reason why the current mainstream object recognition algorithms lack portability is that <br />
 <ul>
   [1] Without a given white point, there is no one-to-one correspondence between the RGB color information and the actual hue of the object.<br />
   [2] It is worth noting that humans do not directly use RGB information but use the brain to process RGB information.
-</ul>
+</ul> -->
 Through further understanding, I found that the colors we usually talk about can be divided into hue, saturation, and luminance. <br />
 Interestingly, in different luminance situations, different hues may show the same RGB. <br />
 <table class="imgtable"><tr><td>
   &emsp;&emsp;<img src="photos/rgb_1.png" alt="alt text" width="535px" height="250px" />&nbsp;</td>
   </tr></table>
-<h3>Limitation</h3>
-This has a major impact on neural networks. If we are in an environment where the light intensity is A, collect data and train CNN. When the test environment light intensity B and A are very different, we can hardly expect CNN to have the same accuracy as in the past.
+<!-- <h3>Limitation</h3>
+This has a major impact on neural networks. If we are in an environment where the light intensity is A, collect data and train CNN. When the test environment light intensity B and A are very different, we can hardly expect CNN to have the same accuracy as in the past. -->
 
 <!-- Proposed Approach -->
 <h1><BIG>P</BIG><small>ROPOSED</small> <BIG>A</BIG><small>PPROACH</small></h1>
+<table class="imgtable"><tr><td>
+  <img src="photos/NPG_pipe.png" alt="alt text" width="300px" height="300px" />&nbsp;</td>
+  <td align="left">
+    <br>In order to solve the above-mentioned problems, we propose an object detection method based on RGB-D data and object 3D model.</br>
+    <ul>
+      <li><p>Our method first rendering different object poses in the scene, comparing the rendered synthesis point cloud with the collected observed point cloud, and selecting the most similar pose as the predict pose.</p></li>
+      <li><p>Unlike other learning-based approaches, it does not require a training process. For new scenes, we can scan the object through the RGB-D sensor to build new 3D model of the object under the new lighting condition.</p></li>
+      <li><p>For light-stable scenes (EG: warehouses), this type of method is quick and easy to implement.</p></li>
+    </ul>
+  </td>
+</tr></table>
 
 
-
-In order to solve the above-mentioned problems, we propose an object detection method based on RGB-D data and object 3D model.
+<!-- In order to solve the above-mentioned problems, we propose an object detection method based on RGB-D data and object 3D model.
 <ul>
   <li><p>Our method first rendering different object poses in the scene, comparing the rendered synthesis point cloud with the collected observed point cloud, and selecting the most similar pose as the predict pose.</p></li>
   <li><p>Unlike other learning-based approaches, it does not require a training process. For new scenes, we can scan the object through the RGB-D sensor to build new 3D model of the object under the new lighting condition.</p></li>
   <li><p>For light-stable scenes (EG: warehouses), this type of method is quick and easy to implement.</p></li>
-</ul>
+</ul> -->
 
 <h1><BIG>O</BIG><small>NGOING</small> <BIG>P</BIG><small>ROJECT</small></h1>
 <h3>Build New Object 3D Model</h3>
 <div>
-  <video id = "cg1" autobuffer playsinline  width="384" height="216" autobuffer class="video-background" controls>
+  <video id = "cg1" autobuffer playsinline muted width="384" height="216" autobuffer class="video-background" controls>
       <source src="gifs/get_model_1.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
@@ -108,7 +136,7 @@ In order to solve the above-mentioned problems, we propose an object detection m
   </script>
   </div>
 <h3>Collect RGB-D Data</h3>
-  <video autoplay loop muted playsinline  width="384" height="216" autobuffer class="video-background" controls>
-    <source src="gifs/get_data.mp4" type="video/mp4">
+  <video autoplay loop muted playsinline  width="597" height="261" autobuffer class="video-background" controls>
+    <source src="photos/NPJ_RGBD_1.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
