@@ -17,107 +17,126 @@
 <title>Research &amp; Projects | Yupeng Han</title>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">MENU</div>
-<div class="menu-item"><a href="index.html">Home</a></div>
-<div class="menu-item"><a href="randp.html" class="current">Research &amp; Projects</a></div>
-<div class="menu-item"><a href="edu.html">Education</a></div>
-<div class="menu-item"><a href="activities.html">Activities</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Research &amp; Projects</h1>
+<header class="site-header">
+<div class="site-shell nav-bar">
+<a class="site-brand" href="index.html">Yupeng Han</a>
+<nav class="site-nav" aria-label="Primary">
+<a href="index.html">Home</a>
+<a href="randp.html" aria-current="page">Research &amp; Projects</a>
+<a href="edu.html">Education</a>
+<a href="activities.html">Activities</a>
+</nav>
 </div>
-<h2>Current Focus</h2>
+</header>
+
+<main class="site-shell page-main">
+<section class="page-hero">
+<h1 class="page-title">Research &amp; Projects</h1>
+</section>
+
+<section class="page-section">
+<article class="content-card callout-card">
+<div class="callout-label">Current Focus</div>
 <p class="section-intro">My recent focus is on GPU performance and LLM inference systems, especially transformer serving efficiency, KV-cache design, batching strategies, prefill/decode trade-offs, tensor parallelism, roofline analysis, and distributed communication.</p>
+</article>
+</section>
 
-<div class="feature-card">
-<h3>LLM Inference Systems &amp; Performance Notes</h3>
-<p class="item-meta">Self-Directed Technical Project</p>
-<ul class="tight-list">
-<li><p>Built a structured technical repository on LLM inference systems, GPU performance, transformer serving, roofline analysis, and distributed communication.</p></li>
-<li><p>Documented and analyzed trade-offs across KV-cache layout, paged KV cache, continuous batching, chunked prefill, tensor parallelism, and llama2.cpp runtime behavior.</p></li>
-<li><p>Organized implementation-oriented notes to connect systems-level bottlenecks with end-to-end inference efficiency.</p></li>
-</ul>
-<p><a href="https://github.com/YupengHan/llm-scaling-notes">GitHub</a></p>
+<section class="page-section">
+<article class="content-card project-card featured-card">
+<h2 class="card-title">LLM Inference Systems &amp; Performance Notes</h2>
+<p class="card-meta">Self-Directed Technical Project</p>
+<div class="tag-row">
+<span class="tag">GPU</span>
+<span class="tag">LLM</span>
+<span class="tag">Systems</span>
 </div>
-
-<h2>Selected Research</h2>
-
-<div class="research-item">
-<h3>Vehicle-PERCH for Outdoor Vehicle Detection</h3>
-<p class="item-meta">Research Staff, Search-Based Planning Lab, Robotics Institute, Carnegie Mellon University | Advisor: Prof. Maxim Likhachev</p>
-<ul class="tight-list">
-<li><p>Proposed Vehicle-PERCH, a 3D vehicle detection framework that estimates vehicle 3D pose through an analysis-by-synthesis pipeline. The method integrates 2D and 3D information and provides real-time capability.</p></li>
-<li><p>Applied unsupervised clustering with Gaussian mixture models to separate vehicles into twelve categories based on vehicle size information, then constructed a dozen vehicle 3D models, including microcar, sedan, compact car, and SUV.</p></li>
-<li><p>Evaluated the method on the KITTI dataset. Results show that Vehicle-PERCH achieves 3D detection and localization performance on par with state-of-the-art learning-based methods without using 3D pose annotation data.</p></li>
-<li><p>Submitted to ICRA 2021.</p></li>
+<ul class="body-list">
+<li>Built a structured technical repository on LLM inference systems, GPU performance, transformer serving, roofline analysis, and distributed communication.</li>
+<li>Documented and analyzed trade-offs across KV-cache layout, paged KV cache, continuous batching, chunked prefill, tensor parallelism, and llama2.cpp runtime behavior.</li>
+<li>Organized implementation-oriented notes to connect systems-level bottlenecks with end-to-end inference efficiency.</li>
 </ul>
-<div class="media-wrap">
-<video controls class="responsive-media" width="640" height="360">
+<div class="link-group">
+<a class="text-link-pill" href="https://github.com/YupengHan/llm-scaling-notes">GitHub</a>
+</div>
+</article>
+</section>
+
+<section class="page-section">
+<div class="section-heading">
+<h2>Selected Research</h2>
+</div>
+<div class="project-stack">
+<article class="content-card project-card">
+<h3 class="card-title">Vehicle-PERCH for Outdoor Vehicle Detection</h3>
+<p class="card-meta">Research Staff, Search-Based Planning Lab, Robotics Institute, Carnegie Mellon University | Advisor: Prof. Maxim Likhachev</p>
+<div class="tag-row">
+<span class="tag">Robotics</span>
+<span class="tag">3D Perception</span>
+<span class="tag">Vehicle Detection</span>
+</div>
+<ul class="body-list">
+<li>Proposed Vehicle-PERCH, a 3D vehicle detection framework that estimates vehicle 3D pose through an analysis-by-synthesis pipeline. The method integrates 2D and 3D information and provides real-time capability.</li>
+<li>Applied unsupervised clustering with Gaussian mixture models to separate vehicles into twelve categories based on vehicle size information, then constructed a dozen vehicle 3D models, including microcar, sedan, compact car, and SUV.</li>
+<li>Evaluated the method on the KITTI dataset. Results show that Vehicle-PERCH achieves 3D detection and localization performance on par with state-of-the-art learning-based methods without using 3D pose annotation data.</li>
+<li>Submitted to ICRA 2021.</li>
+</ul>
+<div class="project-media">
+<video controls width="640" height="360">
 <source src="photos/VPF.mp4" type="video/mp4" />
 Your browser does not support the video tag.
 </video>
 </div>
-</div>
+</article>
 
-<div class="research-item">
-<h3>Indoor Object 6-DOF Pose Estimation</h3>
-<p class="item-meta">Research Staff, Search-Based Planning Lab, Robotics Institute, Carnegie Mellon University | Advisor: Prof. Maxim Likhachev</p>
-<ul class="tight-list">
-<li><p>Studied PERCH, a perception-via-search family of algorithms that renders scenes with different object poses and searches for the best explanation of the observed scene while accounting for occlusion.</p></li>
-<li><p>Studied space-rotation formalisms and used object geometric symmetry to reduce redundant rotation proposals, achieving an algorithm speedup of over 50%.</p></li>
-<li><p>Tested on the YCB dataset. Results show that the algorithm surpasses state-of-the-art 6-DOF pose estimation methods by a large margin without requiring any ground-truth pose annotations.</p></li>
-<li><p>[<a href="https://arxiv.org/abs/2008.00326">Paper</a>] | [<a href="https://sbpl-cruz.github.io/perception/">GitHub</a>] | [<a href="https://www.youtube.com/watch?v=xNFWHj0rL6w">Full Video</a>]</p></li>
+<article class="content-card project-card">
+<h3 class="card-title">Indoor Object 6-DOF Pose Estimation</h3>
+<p class="card-meta">Research Staff, Search-Based Planning Lab, Robotics Institute, Carnegie Mellon University | Advisor: Prof. Maxim Likhachev</p>
+<div class="tag-row">
+<span class="tag">GPU</span>
+<span class="tag">Robotics</span>
+<span class="tag">Pose Estimation</span>
+</div>
+<ul class="body-list">
+<li>Studied PERCH, a perception-via-search family of algorithms that renders scenes with different object poses and searches for the best explanation of the observed scene while accounting for occlusion.</li>
+<li>Studied space-rotation formalisms and used object geometric symmetry to reduce redundant rotation proposals, achieving an algorithm speedup of over 50%.</li>
+<li>Tested on the YCB dataset. Results show that the algorithm surpasses state-of-the-art 6-DOF pose estimation methods by a large margin without requiring any ground-truth pose annotations.</li>
 </ul>
-<div class="media-wrap">
-<video controls class="responsive-media" width="640" height="360">
+<div class="link-group">
+<a class="text-link-pill" href="https://arxiv.org/abs/2008.00326">Paper</a>
+<a class="text-link-pill" href="https://sbpl-cruz.github.io/perception/">GitHub</a>
+<a class="text-link-pill" href="https://www.youtube.com/watch?v=xNFWHj0rL6w">Full Video</a>
+</div>
+<div class="project-media">
+<video controls width="640" height="360">
 <source src="photos/perch2.mp4" type="video/mp4" />
 Your browser does not support the video tag.
 </video>
 </div>
-<div class="infoblock">
-<div class="blocktitle">Featured Publication</div>
-<div class="blockcontent">
+<div class="project-note">
+<span class="project-note-label">Featured Publication</span>
 <p>Aditya Agarwal, <b>Yupeng Han</b>, and Maxim Likhachev, "PERCH 2.0: Fast and Accurate GPU-based Perception via Search for Object Pose Estimation," <i>IEEE International Conference on Intelligent Robots and Systems 2020</i></p>
-</div></div>
 </div>
+</article>
 
-<div class="research-item">
-<h3>Modeling and Analysis of Complex System</h3>
-<p class="item-meta">Master's Student, Design Engineering Lab at Purdue (DELP), Mechanical Engineering Department, Purdue University | Advisor: Prof. Jitesh Panchal</p>
-<ul class="tight-list">
-<li><p>Addressed the difficulty that service seekers face when choosing among many service providers, and improved on the first-in, first-out matching mechanism by developing a stable matching system based on utility theory.</p></li>
-<li><p>Generated preference lists for service providers and service seekers based on different utility interests and studied the optimal matching frequency for repeated matching.</p></li>
-</ul>
-<div class="infoblock">
-<div class="blocktitle">Featured Publication</div>
-<div class="blockcontent">
-<p>Thekinen J., <b>Yupeng Han</b>, and Panchal J. H., "Designing market thickness and optimal frequency of multi-period stable matching in CBDM," <i>ASME International Design Engineering Technical Conferences Computers and Information in Engineering Conference 2018</i> [<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">PDF</a>]</p>
-</div></div>
+<article class="content-card project-card">
+<h3 class="card-title">Modeling and Analysis of Complex System</h3>
+<p class="card-meta">Master's Student, Design Engineering Lab at Purdue (DELP), Mechanical Engineering Department, Purdue University | Advisor: Prof. Jitesh Panchal</p>
+<div class="tag-row">
+<span class="tag">Modeling</span>
+<span class="tag">Systems</span>
+<span class="tag">Analysis</span>
 </div>
-</td>
-</tr>
-</table>
+<ul class="body-list">
+<li>Addressed the difficulty that service seekers face when choosing among many service providers, and improved on the first-in, first-out matching mechanism by developing a stable matching system based on utility theory.</li>
+<li>Generated preference lists for service providers and service seekers based on different utility interests and studied the optimal matching frequency for repeated matching.</li>
+</ul>
+<div class="project-note">
+<span class="project-note-label">Featured Publication</span>
+<p>Thekinen J., <b>Yupeng Han</b>, and Panchal J. H., "Designing market thickness and optimal frequency of multi-period stable matching in CBDM," <i>ASME International Design Engineering Technical Conferences Computers and Information in Engineering Conference 2018</i> [<a href="https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2018/51722/V01AT02A024/273503">PDF</a>]</p>
+</div>
+</article>
+</div>
+</section>
+</main>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
