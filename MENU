@@ -1,7 +1,5 @@
 MENU
-    Home                [index.html]
-    Research			[research.html]
-    Projects			[projects.html]
-    Courses			    [courses.html]
-    Teaching            [teaching.html] 
-    Activities          [activities.html]
+    Home                    [index.html]
+    Research & Projects     [randp.html]
+    Education               [edu.html]
+    Activities              [activities.html]
