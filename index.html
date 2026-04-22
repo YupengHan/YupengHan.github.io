@@ -75,6 +75,43 @@
 <div class="section-heading">
 <h2>Featured</h2>
 </div>
+<div class="card-stack">
+<article class="content-card project-card featured-card">
+<h3 class="card-title-sm">LLM Inference Systems &amp; Performance Notes</h3>
+<p class="card-meta">Self-Directed Technical Project</p>
+<div class="tag-row">
+<span class="tag">GPU</span>
+<span class="tag">LLM</span>
+<span class="tag">Systems</span>
+</div>
+<ul class="body-list">
+<li>Built a structured technical repository on LLM inference systems, GPU performance, transformer serving, roofline analysis, and distributed communication.</li>
+<li>Documented trade-offs across KV-cache layout, paged KV cache, continuous batching, chunked prefill, tensor parallelism, and runtime behavior.</li>
+<li>Organized implementation-oriented notes to connect systems bottlenecks with end-to-end inference efficiency.</li>
+</ul>
+<div class="link-group">
+<a class="text-link-pill" href="https://github.com/YupengHan/llm-scaling-notes">GitHub</a>
+</div>
+</article>
+<article class="content-card project-card featured-card">
+<h3 class="card-title-sm">CUDA Kernel Optimization Harness</h3>
+<p class="card-meta">CUDA | BF16 GEMM | RTX 3070 Laptop GPU</p>
+<div class="tag-row">
+<span class="tag">CUDA</span>
+<span class="tag">Profiling</span>
+<span class="tag">BF16 GEMM</span>
+<span class="tag">Performance</span>
+</div>
+<ul class="body-list">
+<li>Engineered a profiling-driven, human-in-the-loop CUDA matmul optimization harness for a fixed BF16 GEMM on an RTX 3070 Laptop GPU, with correctness-gated benchmarking and structured iteration.</li>
+<li>Reduced a shape-specialized custom kernel from 802.8 ms to 24.2 ms; outperformed the local CUTLASS baseline of 25.9 ms by about 7% and reached 91.1% of the best local cuBLAS result.</li>
+<li>Used the harness feedback loop to keep iteration productive while identifying next-step search directions across the optimization space.</li>
+</ul>
+<div class="link-group">
+<a class="text-link-pill" href="https://github.com/YupengHan/matmul_optimizer">GitHub</a>
+<a class="text-link-pill" href="https://www.linkedin.com/posts/yupeng-han_short-progress-update-the-harness-engineering-share-7452567161144971264-q_qN?utm_source=share&utm_medium=member_desktop&rcm=ACoAABfquCUBcSmg4944ih7z73zOQo-Tq_5OZ7I">LinkedIn Post</a>
+</div>
+</article>
 <article class="content-card featured-card">
 <h3 class="card-title-sm">SJTU Outstanding Individual</h3>
 <p class="featured-caption">Recognition featured by SJTU Academic News.</p>
@@ -82,6 +119,7 @@
 <a class="text-link-pill" href="https://news.sjtu.edu.cn/ztzl_qczj/20180414/71027.html">View Article</a>
 </div>
 </article>
+</div>
 </section>
 </main>
 </body>
