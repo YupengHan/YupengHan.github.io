@@ -88,8 +88,7 @@
 </div>
 <ul class="body-list">
 <li>Engineered a profiling-driven, human-in-the-loop CUDA matmul optimization harness for a fixed BF16 GEMM on an RTX 3070 Laptop GPU, with correctness-gated benchmarking and structured iteration.</li>
-<li>Reduced a shape-specialized custom kernel from 802.8 ms to 24.2 ms; outperformed the local CUTLASS baseline of 25.9 ms by about 7% and reached 91.1% of the best local cuBLAS result.</li>
-<li>Used the harness feedback loop to keep iteration productive while identifying next-step search directions across the optimization space.</li>
+<li>Reduced a shape-specialized custom kernel from <b>802.8 ms to 24.2 ms</b>; outperformed the local CUTLASS baseline of <b>25.9 ms by about 7%</b> and reached <b>91.1%</b> of the best local cuBLAS result of <b>22.0 ms</b>.</li>
 </ul>
 <div class="link-group">
 <a class="text-link-pill" href="https://github.com/YupengHan/matmul_optimizer">GitHub</a>
